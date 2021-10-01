@@ -6,8 +6,8 @@ public:
         int result = 0;
         while (tail < s.size()) {
             if (a.count(s[tail]) == 0) {
-                a.insert(s[tail]);
                 result = max(result, tail - head + 1);
+                a.insert(s[tail]);
                 tail++;
             } else {
                 a.erase(s[head]);
